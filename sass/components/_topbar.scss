@@ -1,0 +1,35 @@
+.page-topbar {
+  align-items: center;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  grid-area: topbar;
+  padding: 4rem 2rem;
+  position: sticky;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+
+  figcaption {
+    position: relative;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.nav-link {
+  border-bottom: .2em solid transparent;
+  font-weight: 700;
+
+  &:hover, .active {
+    border-bottom-color: var(--text);
+  }
+}

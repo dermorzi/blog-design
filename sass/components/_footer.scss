@@ -1,0 +1,9 @@
+.page-footer {
+  grid-area: footer;
+  padding: 3rem 2rem;
+  text-align: center;
+
+  > * {
+    margin: 0 auto;
+  }
+}

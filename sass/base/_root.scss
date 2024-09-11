@@ -1,0 +1,125 @@
+:root {
+    --background: hsl(0, 0%, 93%);
+    --background-50: hsl(0, 0%, 93%, 60%);
+    --text: hsl(0, 0%, 13%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: hsl(0, 0%, 13%);
+        --background-50: hsl(0, 0%, 13%, 60%);
+        --text: hsl(0, 0%, 93%);
+    }
+}
+
+html, body {
+    background: var(--background);
+    color: var(--text);
+    font-family: sans-serif;
+    line-height: 1.45;
+}
+
+p, blockquote, ul, ol, dl {
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  border-left: .25rem solid;
+  font-weight: bold;
+  font-size: 1.15rem;
+  max-width: 55ch;
+  padding: 1rem;
+
+  cite {
+    display: block;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: .5em;
+    text-align: right;
+
+    &::before, &::after {
+      content: ' ~ ';
+    }
+  }
+}
+
+ul.inline {
+  display: inline-flex;
+  gap: .5em;
+}
+
+ul:not(.inline) li::before {
+  content: '– ';
+}
+
+ol {
+  padding-left: 1em;
+  list-style-type: numeric;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+img {
+  display: block;
+}
+
+figure {
+  display: inline-block;
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: center;
+  max-width: 65ch;
+}
+
+figcaption {
+  background: var(--background-50);
+  font-size: .8em;
+  padding: .5em 1em;
+  position: absolute;
+  inset: auto 0 0 0;
+  text-wrap: pretty;
+}
+
+hgroup {
+  border-left: .25rem solid;
+  padding-inline: 1rem;
+  padding-bottom: .025em;
+
+  p {
+    margin-bottom: .25em;
+  }
+}
+
+.video {
+  aspect-ratio: 16/9;
+  margin-bottom: 1rem;
+  position: relative;
+
+  * {
+    position: absolute;
+    height: 100%;
+    inset: 0;
+    width: 100%;
+
+  }
+}
+
+section {
+  .section-title {
+    margin-bottom: 1rem;
+  }
+}
